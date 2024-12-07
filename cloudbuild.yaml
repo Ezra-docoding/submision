@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api",
+        "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/asclepius",
         ".",
       ]
 
@@ -14,7 +14,7 @@ steps:
     args:
       [
         "push",
-        "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api",
+        "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/asclepius",
       ]
 
   # Step 3: Deploy the image to Cloud Run
@@ -23,9 +23,9 @@ steps:
       - "gcloud"
       - "run"
       - "deploy"
-      - "submission-asclepius-api"
+      - "asclepius"
       - "--image"
-      - "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api"
+      - "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/asclepius",
       - "--platform"
       - "managed"
       - "--region"
@@ -34,4 +34,4 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 images:
-  - "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api"
+  - "<sesuaikan dengan lokasi deploy firestore>-docker.pkg.dev/<ProjectID>/<nama-artifact-registery>/asclepius"
