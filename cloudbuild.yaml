@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "global-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api",
+        "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api",
         ".",
       ]
 
@@ -14,7 +14,7 @@ steps:
     args:
       [
         "push",
-        "global-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api",
+        "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api",
       ]
 
   # Step 3: Deploy the image to Cloud Run
@@ -25,11 +25,11 @@ steps:
       - "deploy"
       - "submission-asclepius-api"
       - "--image"
-      - "global-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api"
+      - "asia-southeast2-docker.pkg.dev/peppy-oven-444016-g6/mlgc/submission-asclepius-api"
       - "--platform"
       - "managed"
       - "--region"
-      - "global"
+      - "asia-southeast2"
       - "--allow-unauthenticated"
 options:
   logging: CLOUD_LOGGING_ONLY
